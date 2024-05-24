@@ -17,8 +17,8 @@ app.get('/post', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'pages/post.html'))
 })
 
-app.listen(4000, () => {
-  console.log('app listening on 4000')
+app.listen(3000, () => {
+  console.log('app listening on 3000')
 })
 
 // this isn't working.. for sure it is now
