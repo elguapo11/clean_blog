@@ -16,6 +16,9 @@ mongoose.connect('mongodb://localhost/my_database', { useNewUrlParser: true })
 app.get('/about', (req, res) => {
   res.render('about')
 })
+app.get('/create', (req, res) => {
+  res.render('create')
+})
 app.get('/contact', (req, res) => {
   res.render('contact')
 })
