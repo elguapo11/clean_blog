@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
   res.render('index')
 })
 
-mongoose.connect('mongodb://localhost/my_database', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost/my_database')
 
 app.get('/about', (req, res) => {
   res.render('about')
