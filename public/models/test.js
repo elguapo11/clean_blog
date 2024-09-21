@@ -7,4 +7,5 @@ BlogPost.create({
   title: 'This is a test for visualizing mongodb',
   body: 'And this is the body of my test',
 })
-console.log(BlogPost)
+
+console.log(BlogPost.find({ title: 'This is a test for visualizing mongodb' }))
