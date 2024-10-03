@@ -16,7 +16,7 @@ mongoose.connect('mongodb://localhost/my_database')
 app.get('/about', (req, res) => {
   res.render('about')
 })
-app.get('/create', (req, res) => {
+app.get('/posts/create', (req, res) => {
   res.render('create')
 })
 app.get('/contact', (req, res) => {
