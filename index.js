@@ -16,7 +16,7 @@ mongoose.connect('mongodb://localhost/my_database')
 app.get('/about', (req, res) => {
   res.render('about')
 })
-app.get('/posts/create', (req, res) => {
+app.get('/posts/new', (req, res) => {
   res.render('create')
 })
 app.get('/contact', (req, res) => {
@@ -24,6 +24,10 @@ app.get('/contact', (req, res) => {
 })
 app.get('/post', (req, res) => {
   res.render('post')
+})
+app.post('/posts/store', (req, res) => {
+  console.log(req.body)
+  res.redirect('/')
 })
 
 app.listen(3000, () => {
