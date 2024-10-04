@@ -11,8 +11,10 @@ app.set('view engine', 'ejs')
 
 app.use(express.static('public'))
 
-app.get('/', (req, res) => {
-  res.render('index')
+app.get('/', async (req, res) => {
+  const blogposts = await BlogPost.find({})
+  console.log(blogposts)
+  res.render('index', { blogposts })
 })
 
 mongoose.connect('mongodb://localhost/my_database')
