@@ -9,6 +9,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.set('view engine', 'ejs')
 
+mongoose.connect('mongodb://localhost/my_database')
 app.use(express.static('public'))
 
 app.get('/', async (req, res) => {
@@ -17,7 +18,6 @@ app.get('/', async (req, res) => {
   res.render('index', { blogposts })
 })
 
-mongoose.connect('mongodb://localhost/my_database')
 
 app.get('/about', (req, res) => {
   res.render('about')
@@ -29,13 +29,16 @@ app.get('/posts/new', (req, res) => {
 app.get('/contact', (req, res) => {
   res.render('contact')
 })
-app.get('/post', (req, res) => {
-  res.render('post')
+app.get('/post/:id', async (req, res) => {
+  const blogpost = await BlogPost.findById(req.params.id)
+  console.log(blogpost + 'benny*****************************')
+  console.log(req.params.id)
+
+  res.render('post',{ blogpost })
 })
 app.post('/posts/store', async (req, res) => {
   await BlogPost.create(req.body)
   console.log(req.body)
-  console.log('post submitted')
   res.redirect('/')
 })
 
