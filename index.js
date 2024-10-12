@@ -29,6 +29,10 @@ app.get('/posts/new', (req, res) => {
 app.get('/contact', (req, res) => {
   res.render('contact')
 })
+app.get('/error', (req, res) => {
+  res.send(404 + ' not found')
+  console.log('oops')
+})
 app.get('/post/:id', async (req, res) => {
   const blogpost = await BlogPost.findById(req.params.id)
   res.render('post',{ blogpost })
