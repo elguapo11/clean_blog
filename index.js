@@ -8,6 +8,9 @@ const BlogPost = require('./public/models/BlogPost')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.set('view engine', 'ejs')
+const fileUpload = require('express-fileupload')
+app.use(fileUpload())
+
 
 mongoose.connect('mongodb://localhost/my_database')
 app.use(express.static('public'))
@@ -38,9 +41,16 @@ app.get('/post/:id', async (req, res) => {
   res.render('post',{ blogpost })
 })
 app.post('/posts/store', async (req, res) => {
-  await BlogPost.create(req.body)
-  console.log(req.body)
-  res.redirect('/')
+  let image = req.files.image;
+  image.mv(path.resolve(__dirname, 'public/img', image.name), async (error) => {
+    await BlogPost.create({
+      ...req.body,
+      image: '/img/' + image.name
+    })
+    console.log(image)
+    res.redirect('/')
+  })
+
 })
 
 app.delete('/posts/:id', async (req, res) => {
