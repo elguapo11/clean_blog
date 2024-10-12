@@ -34,11 +34,11 @@
               <h2 class="post-title"><%= blogposts[i].title %></h2>
               <h3 class="post-subtitle"><%= blogposts[i].body %></h3>
             </a>
-            <p class="post-meta">Posted by</p>
+            <p class="post-meta">Posted by
+              <a href='#'><%= blogposts[i].username %></a>
+              on <%= blogposts[i].datePosted.toDateString() %></p>
           </div>
-
           <hr class="my-4" />
-
           <%}%>
           <!-- Pager-->
           <div class="d-flex justify-content-end mb-4">
