@@ -31,15 +31,18 @@ app.get('/contact', (req, res) => {
 })
 app.get('/post/:id', async (req, res) => {
   const blogpost = await BlogPost.findById(req.params.id)
-  console.log(blogpost + 'benny*****************************')
-  console.log(req.params.id)
-
   res.render('post',{ blogpost })
 })
 app.post('/posts/store', async (req, res) => {
   await BlogPost.create(req.body)
   console.log(req.body)
   res.redirect('/')
+})
+
+app.delete('/posts/:id', async (req, res) => {
+  const blogpost = await BlogPost.findById(req.params.id)
+  console.log(blogpost + 'has been deleted')
+  res.sendStatus(200)
 })
 
 app.listen(3000, () => {
