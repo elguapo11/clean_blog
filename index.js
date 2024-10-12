@@ -62,3 +62,8 @@ app.delete('/posts/:id', async (req, res) => {
 app.listen(3000, () => {
   console.log('app listening on 3000')
 })
+
+app.use(function(req,res){
+  console.log('this page does not exist')
+  res.render('error');
+});
