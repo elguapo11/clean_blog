@@ -32,10 +32,7 @@ app.get('/posts/new', (req, res) => {
 app.get('/contact', (req, res) => {
   res.render('contact')
 })
-app.get('/error', (req, res) => {
-  res.send(404 + ' not found')
-  console.log('oops')
-})
+
 app.get('/post/:id', async (req, res) => {
   const blogpost = await BlogPost.findById(req.params.id)
   res.render('post',{ blogpost })
@@ -63,7 +60,7 @@ app.listen(3000, () => {
   console.log('app listening on 3000')
 })
 
-app.use(function(req,res){
+app.all('*', (req, res) => {
   console.log('this page does not exist')
   res.render('error');
-});
+})
