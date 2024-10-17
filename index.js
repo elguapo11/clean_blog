@@ -17,7 +17,6 @@ app.use(express.static('public'))
 
 app.get('/', async (req, res) => {
   const blogposts = await BlogPost.find({})
-  console.log(blogposts)
   res.render('index', { blogposts })
 })
 
