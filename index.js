@@ -8,8 +8,11 @@ const BlogPost = require('./public/models/BlogPost')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.set('view engine', 'ejs')
+
 const fileUpload = require('express-fileupload')
 app.use(fileUpload())
+
+
 
 
 mongoose.connect('mongodb://localhost/my_database')
@@ -31,6 +34,14 @@ app.get('/posts/new', (req, res) => {
 app.get('/contact', (req, res) => {
   res.render('contact')
 })
+const validationMiddleWare = (req, res, next) => {
+  if (req.files == null || req.body.title == null || req.body.body == null) {
+    console.log('you need to write a post with stuff to publish')
+    return res.redirect('/posts/new')
+  }
+  next()
+}
+app.use('/posts/store', validationMiddleWare)
 
 app.get('/post/:id', async (req, res) => {
   const blogpost = await BlogPost.findById(req.params.id)
@@ -60,6 +71,5 @@ app.listen(3000, () => {
 })
 
 app.all('*', (req, res) => {
-  console.log('this page does not exist')
   res.render('error');
 })
