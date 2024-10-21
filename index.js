@@ -4,12 +4,13 @@ const path = require('path')
 const mongoose = require('mongoose')
 const ejs = require('ejs')
 const bodyParser = require('body-parser')
-const BlogPost = require('./public/models/BlogPost')
-const newPostController = require('./public/controllers/newPost')
+const BlogPost = require('./models/BlogPost')
+const newPostController = require('./controllers/newPost')
+const validationMiddleWare = require('./middleware/validationMiddleware')
 
-const homeController = require('./public/controllers/home')
-const storePostController = require('./public/controllers/storePost')
-const getPostController = require('./public/controllers/getPost')
+const homeController = require('./controllers/home')
+const storePostController = require('./controllers/storePost')
+const getPostController = require('./controllers/getPost')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.set('view engine', 'ejs')
@@ -37,13 +38,7 @@ app.get('/about', (req, res) => {
 app.get('/contact', (req, res) => {
   res.render('contact')
 })
-const validationMiddleWare = (req, res, next) => {
-  if (req.files == null || req.body.title == null || req.body.body == null) {
-    console.log('you need to write a post with stuff to publish')
-    return res.redirect('/posts/new')
-  }
-  next()
-}
+
 app.use('/posts/store', validationMiddleWare)
 app.delete('/posts/:id', async (req, res) => {
   const blogpost = await BlogPost.findById(req.params.id)
