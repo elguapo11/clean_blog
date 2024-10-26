@@ -14,31 +14,34 @@ const storePostController = require('./controllers/storePost')
 const getPostController = require('./controllers/getPost')
 const loginController = require('./controllers/login')
 const loginUserController = require('./controllers/loginUser')
+app.set('view engine', 'ejs')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-app.set('view engine', 'ejs')
 const fileUpload = require('express-fileupload')
 const User = require('./models/User')
 app.use(fileUpload())
 mongoose.connect('mongodb://localhost/my_database')
 app.use(express.static('public'))
+app.use(expressSession({
+  secret: 'keyboard cat'
+}))
+app.use('/posts/store', validationMiddleWare)
 app.get('posts/new', newPostController)
 app.get('/auth/register', newUserController)
 app.get('/', homeController)
-app.use('/posts/store', validationMiddleWare)
 app.get('/posts/new', newPostController)
 app.get('/post/:id',getPostController)
-app.post('/posts/store', storePostController)
-app.post('/users/register', storeUserController)
-app.post('/users/login', loginUserController)
 app.get('/auth/login', loginController)
-app.get('/about', (req, res) => {
-  res.render('about')
-})
-
 app.get('/contact', (req, res) => {
   res.render('contact')
 })
+app.get('/about', (req, res) => {
+  res.render('about')
+})
+app.post('/posts/store', storePostController)
+app.post('/users/register', storeUserController)
+app.post('/users/login', loginUserController)
+
 
 app.delete('/posts/:id', async (req, res) => {
   const blogpost = await BlogPost.findById(req.params.id)
@@ -50,9 +53,6 @@ app.listen(3000, () => {
   console.log('app listening on 3000')
 })
 
-app.use(expressSession({
-  secret: 'keyboard cat'
-}))
 
 // app.all('*', (req, res) => {
 //   res.render('error');
