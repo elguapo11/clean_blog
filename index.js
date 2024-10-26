@@ -2,6 +2,7 @@ const express = require('express')
 const app = new express()
 const mongoose = require('mongoose')
 const ejs = require('ejs')
+const expressSession = require('express-session')
 const bodyParser = require('body-parser')
 const BlogPost = require('./models/BlogPost')
 const storeUserController = require('./controllers/storeUser')
@@ -48,6 +49,10 @@ app.delete('/posts/:id', async (req, res) => {
 app.listen(3000, () => {
   console.log('app listening on 3000')
 })
+
+app.use(expressSession({
+  secret: 'keyboard cat'
+}))
 
 // app.all('*', (req, res) => {
 //   res.render('error');
