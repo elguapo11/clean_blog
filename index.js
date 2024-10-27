@@ -14,6 +14,12 @@ const storePostController = require('./controllers/storePost')
 const getPostController = require('./controllers/getPost')
 const loginController = require('./controllers/login')
 const loginUserController = require('./controllers/loginUser')
+const authMiddleware = require('./middleware/authMiddleware')
+const redirectIfAuthenticatedMiddleware = require('./middleware/redirectIfAuthenticatedMiddleware')
+const logoutController = require('./controllers/logout')
+
+
+
 app.set('view engine', 'ejs')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -27,20 +33,22 @@ app.use(expressSession({
 }))
 app.use('/posts/store', validationMiddleWare)
 app.get('posts/new', newPostController)
-app.get('/auth/register', newUserController)
+app.get('/auth/register', redirectIfAuthenticatedMiddleware, newUserController)
 app.get('/', homeController)
 app.get('/posts/new', newPostController)
 app.get('/post/:id',getPostController)
-app.get('/auth/login', loginController)
+app.get('/auth/login', redirectIfAuthenticatedMiddleware, loginController)
+app.get('/posts/new', authMiddleware, newPostController)
 app.get('/contact', (req, res) => {
   res.render('contact')
 })
 app.get('/about', (req, res) => {
   res.render('about')
 })
-app.post('/posts/store', storePostController)
-app.post('/users/register', storeUserController)
-app.post('/users/login', loginUserController)
+app.get('auth/logout', logoutController)
+app.post('/posts/store', newPostController, storePostController)
+app.post('/users/register', redirectIfAuthenticatedMiddleware, storeUserController)
+app.post('/users/login', redirectIfAuthenticatedMiddleware, loginUserController)
 
 
 app.delete('/posts/:id', async (req, res) => {
@@ -49,11 +57,14 @@ app.delete('/posts/:id', async (req, res) => {
   res.sendStatus(200)
 })
 
+app.use((req, res) => res.render('notFound'))
 app.listen(3000, () => {
   console.log('app listening on 3000')
 })
 
+global.loggedIn = null
 
-// app.all('*', (req, res) => {
-//   res.render('error');
-// })
+app.use('*', (req, res, next) => {
+  loggedIn = req.session.userId
+  next()
+})
