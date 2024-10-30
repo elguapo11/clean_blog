@@ -3,6 +3,7 @@ const app = new express()
 const mongoose = require('mongoose')
 const ejs = require('ejs')
 const expressSession = require('express-session')
+const flash = require('connect-flash')
 const bodyParser = require('body-parser')
 const BlogPost = require('./models/BlogPost')
 const storeUserController = require('./controllers/storeUser')
@@ -21,6 +22,7 @@ const logoutController = require('./controllers/logout')
 
 
 app.set('view engine', 'ejs')
+app.use(flash());
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 const fileUpload = require('express-fileupload')
@@ -29,7 +31,9 @@ app.use(fileUpload())
 mongoose.connect('mongodb://localhost/my_database')
 app.use(express.static('public'))
 app.use(expressSession({
-  secret: 'keyboard cat'
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true
 }))
 app.use('/posts/store', validationMiddleWare)
 app.get('posts/new', newPostController)
@@ -56,13 +60,17 @@ app.delete('/posts/:id', async (req, res) => {
   console.log(blogpost + 'has been deleted')
   res.sendStatus(200)
 })
-
 app.use((req, res) => res.render('notFound'))
 app.listen(3000, () => {
   console.log('app listening on 3000')
 })
 
 global.loggedIn = null
+
+app.use((req, res, next) => {
+  res.locals.messages = req.flash();
+  next();
+});
 
 app.use('*', (req, res, next) => {
   loggedIn = req.session.userId

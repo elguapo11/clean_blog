@@ -10,7 +10,9 @@ module.exports = async (req, res) => {
       const validationErrors = Object.keys(error.errors).map(
         key => error.errors[key].message
       );
-      // Pass errors to the view
+      req.flash('validationErrors', validationErrors)
+      req.flash('data', req.body);
+      console.log(req.body[0])
       return res.render('register', { errors: validationErrors });
     }
     console.log(error);

@@ -28,8 +28,7 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <% if(errors != null && errors.length > 0) {%>
           <ul class="list-group">
-            <% for(var i = 0; i < errors.length; i++){
-              %>
+            <% for(var i = 0; i < errors.length; i++){ %>
             <li class="list-group-item list-group-item-danger">
               <%= errors[i] %>
             </li>
@@ -60,7 +59,6 @@
                   type="password"
                   class="form-control"
                   id="password"
-                  name="password"
                 />
               </div>
             </div>
