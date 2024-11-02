@@ -1,5 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const flash = require('connect-flash');
+
 
 mongoose.connect('mongodb://localhost/my_database', { useNewUrlParser: true })
 
@@ -28,6 +30,7 @@ app.use(
     saveUninitialized: true,
   })
 )
+app.use(flash())
 app.use('*', (req, res, next) => {
   loggedIn = req.session.userId
   next()
