@@ -1,9 +1,12 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const flash = require('connect-flash');
+require("dotenv").config();
+
+const { PORT, CONNECTION_STRING } = process.env;
 
 
-mongoose.connect('mongodb://localhost/my_database', { useNewUrlParser: true })
+mongoose.connect(CONNECTION_STRING, { useNewUrlParser: true })
 
 const app = new express()
 const ejs = require('ejs')
@@ -36,8 +39,8 @@ app.use('*', (req, res, next) => {
   next()
 })
 
-app.listen(3000, () => {
-  console.log('Lstening on port 3000')
+app.listen(PORT, () => {
+  console.log(`Lstening on port ${PORT}`)
 })
 
 const newPostController = require('./controllers/newPost')
