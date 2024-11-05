@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const flash = require('connect-flash');
 require("dotenv").config();
 
-const { PORT, CONNECTION_STRING } = process.env;
+const { PORT, CONNECTION_STRING, } = process.env;
 
 
 mongoose.connect(CONNECTION_STRING, { useNewUrlParser: true })
@@ -28,7 +28,7 @@ app.use(fileUpload())
 app.use('/posts/store', validateMiddleWare)
 app.use(
   expressSession({
-    secret: 'keyboard cat',
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
   })
