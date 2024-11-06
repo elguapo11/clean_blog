@@ -28,7 +28,7 @@ app.use(fileUpload())
 app.use('/posts/store', validateMiddleWare)
 app.use(
   expressSession({
-    secret: SECRET,
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
   })
