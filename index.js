@@ -10,7 +10,6 @@ mongoose.connect(CONNECTION_STRING, { useNewUrlParser: true })
 
 const app = new express()
 const ejs = require('ejs')
-const { resourceUsage } = require('process')
 
 const fileUpload = require('express-fileupload')
 const validateMiddleWare = require('./middleware/validationMiddleware')
