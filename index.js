@@ -6,7 +6,7 @@ require("dotenv").config();
 const { PORT, CONNECTION_STRING, } = process.env;
 
 
-mongoose.connect(process.env.CONNECTION_STRING, { useNewUrlParser: true });
+// mongoose.connect('mongodb+srv://emeryaiden170:VoCVHmREWrEDLS5n@cluster0.h9kvs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true });
 
 
 const app = new express()
