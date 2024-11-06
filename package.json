@@ -8,7 +8,7 @@
     "express": "^4.21.0",
     "express-fileupload": "^1.5.1",
     "express-session": "^1.18.1",
-    "mongoose": "^7.0.0",
+    "mongoose": "^8.8.0",
     "mongoose-unique-validator": "^4.0.1"
   },
   "devDependencies": {

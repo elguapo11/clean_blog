@@ -6,7 +6,7 @@ const flash = require('connect-flash');
 const { PORT, SECRET, CONNECTION_STRING, } = process.env;
 
 
-mongoose.connect("mongodb+srv://emeryaiden170:VoCVHmREWrEDLS5n@cluster0.h9kvs.mongodb.net/", { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://emeryaiden170:VoCVHmREWrEDLS5n@cluster0.h9kvs.mongodb.net/");
 
 // this connection string is going to change depending on the env
 
