@@ -6,7 +6,7 @@ require("dotenv").config();
 const { PORT, CONNECTION_STRING, } = process.env;
 
 
-mongoose.connect(CONNECTION_STRING, { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost/my_database', { useNewUrlParser: true })
 
 const app = new express()
 const ejs = require('ejs')
