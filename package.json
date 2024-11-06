@@ -16,5 +16,8 @@
   },
   "scripts": {
     "dev": "nodemon index.js"
+  },
+  "engines": {
+    "node": "19.8.1"
   }
 }
