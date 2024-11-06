@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const flash = require('connect-flash');
 require("dotenv").config();
 
-const { PORT, CONNECTION_STRING, } = process.env;
+const { PORT, SECRET, CONNECTION_STRING, } = process.env;
 
 
 mongoose.connect('mongodb+srv://emeryaiden170:VoCVHmREWrEDLS5n@cluster0.h9kvs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&tlsInsecure=true', { useNewUrlParser: true });
@@ -28,7 +28,7 @@ app.use(fileUpload())
 app.use('/posts/store', validateMiddleWare)
 app.use(
   expressSession({
-    secret: process.env.SECRET,
+    secret: SECRET,
     resave: false,
     saveUninitialized: true,
   })
