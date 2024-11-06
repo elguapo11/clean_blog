@@ -1,7 +1,7 @@
+require("dotenv").config();
 const express = require('express')
 const mongoose = require('mongoose')
 const flash = require('connect-flash');
-require("dotenv").config();
 
 const { PORT, SECRET, CONNECTION_STRING, } = process.env;
 
