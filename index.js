@@ -6,7 +6,8 @@ const flash = require('connect-flash');
 const { PORT, SECRET, CONNECTION_STRING, } = process.env;
 
 
-mongoose.connect(CONNECTION_STRING, { useNewUrlParser: true });
+mongoose.connect(`${CONNECTION_STRING}`, { useNewUrlParser: true });
+
 // this connection string is going to change depending on the env
 
 
