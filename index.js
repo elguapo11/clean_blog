@@ -8,7 +8,7 @@ const username = encodeURIComponent("<username>");
 const password = encodeURIComponent("<password>");
 
 
-mongoose.connect("mongodb+srv://emeryaiden170:VoCVHmREWrEDLS5n@cluster0.h9kvs.mongodb.net/myDB?retryWrites=true&w=majority&tls=true&tlsAllowInvalidCertificates=true");
+mongoose.connect("mongodb+srv://emeryaiden170:VoCVHmREWrEDLS5n@cluster0.h9kvs.mongodb.net/");
 
 
 
