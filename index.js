@@ -4,8 +4,6 @@ const mongoose = require('mongoose')
 const flash = require('connect-flash');
 
 const { PORT, SECRET, CONNECTION_STRING, } = process.env;
-const username = encodeURIComponent("<username>");
-const password = encodeURIComponent("<password>");
 
 
 mongoose.connect(CONNECTION_STRING);
@@ -34,7 +32,7 @@ app.use(fileUpload())
 app.use('/posts/store', validateMiddleWare)
 app.use(
   expressSession({
-    secret: 'secret cat',
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
   })
