@@ -4,9 +4,13 @@ const mongoose = require('mongoose')
 const flash = require('connect-flash');
 
 const { PORT, SECRET, CONNECTION_STRING, } = process.env;
+const username = encodeURIComponent("<username>");
+const password = encodeURIComponent("<password>");
 
 
-mongoose.connect("mongodb+srv://emeryaiden170:VoCVHmREWrEDLS5n@cluster0.h9kvs.mongodb.net/");
+mongoose.connect("mongodb+srv://emeryaiden170:VoCVHmREWrEDLS5n@cluster0.h9kvs.mongodb.net/myDB?retryWrites=true&w=majority&tls=true&tlsAllowInvalidCertificates=true");
+
+
 
 // this connection string is going to change depending on the env
 
