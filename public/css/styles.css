@@ -10673,8 +10673,8 @@ header.masthead {
   padding-top: calc(8rem + 57px);
   padding-bottom: 8rem;
   background: no-repeat center center;
-  background-color: #6c757d;
-  background-size: cover;
+  background-color: #000000;
+  background-size: contain;
   background-attachment: scroll;
 }
 header.masthead:before {
