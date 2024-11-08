@@ -5,9 +5,9 @@ const flash = require('connect-flash');
 
 const { PORT, SECRET, CONNECTION_STRING, } = process.env;
 
-
-mongoose.connect(CONNECTION_STRING, { useNewUrlParser: true });
-
+mongoose.connect(CONNECTION_STRING)
+.then(() => console.log('Connected to MongoDB'))
+.catch((error) => console.error('Connection error:', error));
 
 
 
