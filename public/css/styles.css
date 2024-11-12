@@ -610,6 +610,14 @@ progress {
   height: auto;
 }
 
+.centered-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 35%; /* Adjust this value to control the maximum size */
+  height: auto; /* Ensures the image isn't warped */
+}
+
 .figure {
   display: inline-block;
 }
