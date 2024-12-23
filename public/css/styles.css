@@ -610,13 +610,19 @@ progress {
   height: auto;
 }
 
+.centered-images-container {
+  display: flex;
+  justify-content: center; /* Centers the images horizontally */
+  align-items: center; /* Aligns the images vertically, if needed */
+  gap: 10px; /* Adjusts spacing between images */
+  flex-wrap: wrap; /* Ensures images wrap to the next line if they exceed the container's width */
+}
+
 .centered-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 70%; /* Adjust this value to control the maximum size */
+  max-width: 40%; /* Adjust this value to control the maximum size */
   height: auto; /* Ensures the image isn't warped */
 }
+
 
 .figure {
   display: inline-block;
