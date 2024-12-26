@@ -619,7 +619,7 @@ progress {
 }
 
 .centered-image {
-  max-width: 70%; /* Adjust this value to control the maximum size */
+  max-width: 40%; /* Adjust this value to control the maximum size */
   height: auto; /* Ensures the image isn't warped */
 }
 
