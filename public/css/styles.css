@@ -623,6 +623,11 @@ progress {
   height: auto; /* Ensures the image isn't warped */
 }
 
+.centered-image.special-size {
+  max-width: 40%; /* Specific size for images with the 'special-size' class */
+  height: auto; /* Ensures the image isn't warped */
+}
+
 
 .figure {
   display: inline-block;
