@@ -618,11 +618,22 @@ progress {
   flex-wrap: wrap; /* Ensures images wrap to the next line if they exceed the container's width */
 }
 
+.centered-text {
+  text-align: center;
+  margin-top: 20px; /* Adjust for spacing */
+}
+
 .centered-image {
   max-width: 40%; /* Adjust this value to control the maximum size */
   height: auto; /* Ensures the image isn't warped */
 }
-
+#instagram-link {
+  text-align: center; /* Centers the text */
+  font-size: 55px;    /* Adjust font size */
+  color: #0077cc;     /* Change text color */
+  font-weight: bold;  /* Makes the text bold */
+  margin-top: 50px;   /* Adds vertical spacing */
+}
 .centered-image.special-size {
   max-width: 50%; /* Specific size for images with the 'special-size' class */
   height: auto; /* Ensures the image isn't warped */
