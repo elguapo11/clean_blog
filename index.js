@@ -50,6 +50,7 @@ app.listen(PORT, () => {
 
 const newPostController = require('./controllers/newPost')
 const homeController = require('./controllers/home')
+const photoController = require('./controllers/photos')
 const storePostController = require('./controllers/storePost')
 const getPostController = require('./controllers/getPost')
 const newUserController = require('./controllers/newUser')
@@ -61,6 +62,7 @@ const logoutController = require('./controllers/logout')
 app.get('/', homeController)
 
 app.get('/post/:id', getPostController)
+app.get('/photos', photoController)
 
 app.get('/posts/new', authMiddleware, newPostController)
 
