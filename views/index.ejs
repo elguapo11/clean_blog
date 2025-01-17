@@ -56,16 +56,16 @@
         <div class="col-md-10 col-lg-8 col-xl-7">
           <% for (var i = 0; i < blogposts.length; i++) {  %>
           <!-- Post preview-->
-          <div class="post-preview">
+          <!-- <div class="post-preview"> -->
             <!-- <a href="/post/<%= blogposts[i]._id %>"> -->
               <h2 class="post-title"><%- blogposts[i].title %>
               </h2>
               <p class="post-subtitle"><%- blogposts[i].body %>
+          </div>
 
             <!-- <p class="post-meta">Posted byc
               <a href='#'><%= blogposts[i].userid.username %></a>
               on <%= blogposts[i].datePosted.toDateString() %></p> -->
-          </div>
           <!-- <hr class="my-4" /> -->
           <% } %>
 
@@ -77,7 +77,6 @@
           </div> -->
         </div>
       </div>
-    </div>
 
     <!-- <hr /> -->
     <!-- Footer-->
