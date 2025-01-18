@@ -45,7 +45,7 @@ app.use('*', (req, res, next) => {
 })
 
 app.listen(PORT, () => {
-  console.log(`Lstening on port ${PORT}`)
+  console.log(`Listening on port ${PORT}`)
 })
 
 const newPostController = require('./controllers/newPost')
