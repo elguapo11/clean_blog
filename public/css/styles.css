@@ -622,7 +622,7 @@ progress {
 .centered-text {
   text-align: center;
   margin-top: 20px; /* Adjust for spacing */
-  background-color: pink;
+  background-color: rgb(116, 0, 58);
 }
 .centered-image {
   max-width: 30%; /* Adjust this value to control the maximum size */
