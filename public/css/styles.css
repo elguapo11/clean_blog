@@ -615,7 +615,7 @@ progress {
   display: flex;
   justify-content: center; /* Centers the images horizontally */
   align-items: center; /* Aligns the images vertically, if needed */
-  gap: 10px; /* Adjusts spacing between images */
+  gap: 1em; /* Adjusts spacing between images */
   flex-wrap: wrap; /* Ensures images wrap to the next line if they exceed the container's width */
 }
 
