@@ -625,7 +625,7 @@ progress {
   background-color: rgb(116, 0, 58);
 }
 .centered-image {
-  max-width: 30%; /* Adjust this value to control the maximum size */
+  max-width: 20%; /* Adjust this value to control the maximum size */
   height: auto; /* Ensures the image isn't warped */
 }
 #instagram-link {
