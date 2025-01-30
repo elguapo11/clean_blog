@@ -10726,6 +10726,11 @@ header.masthead .post-heading,
 header.masthead .site-heading {
   color: #fff;
 }
+masthead-img{
+  width: 1em;
+  height: 1em;
+  object-fit: cover;
+}
 header.masthead .page-heading,
 header.masthead .site-heading {
   text-align: center;
