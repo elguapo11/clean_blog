@@ -10696,6 +10696,10 @@ footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
+header.style
+{
+  background-image: #ff0000;
+}
 
 header.masthead {
   position: relative;
