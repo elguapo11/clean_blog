@@ -1,64 +1,39 @@
 <%- include ('layouts/header'); -%>
     <!-- Navigation -->
-  <header
-    class="masthead"
-    rel=preload
-    style="background-image: url('/img/chess_logo_compressed.png') "
-  >
-
-    <div class="container position-relative px-4 px-lg-5">
-      <div class="row gx-4 gx-lg-5 justify-content-center">
-        <div class="col-md-10 col-lg-8 col-xl-7">
-          <div class="site-heading">
-            <h1>The Salt Lake City Chess Club</h1>
-            <span class="subheading">Building a community through the game of chess</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
     <!-- Main Content-->
-    <div class="centered-images-container">
-      <img src="/img/katie_tf.jpg" alt="katie_playing_chess_with_friends" width="500" height="300" class="centered-image">
-      <img src="/img/sarah_loki.jpg" alt="Sarah_challenging_chess_position" width="500" height="300" class="centered-image">
-      <img src="/img/johnny_chess.jpg" alt="friendly_person_wants_to_play_chess_SLC" width="500" height="300" class="centered-image">
-      <img src="/img/father_nathan.jpg" alt="father_nathan_playing_chess_with_community" width="500" height="300" class="centered-image">
-      <img src="/img/chess_jim.jpg" alt="jim_friendly_beginner_at_chess" width="500" height="300" class="centered-image">
-      <img src="/img/chess_loki_3.jpg" alt="Matt_waiting_for_opponent" width="500" height="300" class="centered-image">
-      <img src="/img/chess_loki_4.jpg" alt="everyone_playing_chess" width="500" height="300" class="centered-image">
-      <img src="/img/chess_loki_7.jpg" alt="chess_club_in_SLC" width="500" height="300" class="centered-image">
-      <img src="/img/chess_loki.jpg" alt="chess_set" width="500" height="300" class="centered-image">
-      <img src="/img/sausage_fest_chess.jpg" alt="community_gathering_for_chess" width="500" height="300" class="centered-image">
-      <img src="/img/chess_loki_5.jpg" alt="loki_letting_us_play_chess" width="500" height="300" class="centered-image">
-      <img src="/img/chess_loki_6.jpg" alt="friendly_faces_playing_chess" width="500" height="300" class="centered-image">
-      <img src="/img/chess_ganaa.jpg" alt="chess_champ_in_the_making" width="500" height="300" class="centered-image">
-      <img src="/img/bryan_chess.jpg" alt="how_to_focus_in_chess" width="500" height="300" class="centered-image">
-      <img src="/img/guy.jpg" alt="attacking_chess" width="500" height="300" class="centered-image">
-      <img src="/img/chess_atticus.jpg" alt="atticus_plays_awful_chess" width="500" height="300" class="centered-image">
 
-
-
-
-    </div>
-    <div class="centered-text">
-      <h2 id="instagram-link"><a href="https://www.instagram.com/slc_chessclub?igsh=MTdqZXZ1ZTBxczFxYw==" target="_blank"><strong>FOLLOW OUR INSTAGRAM @slc_chessclub :) </strong></a></h2>
-    </div>
-    <div class="container px-4 px-lg-5">
-      <div class="row gx-4 gx-lg-5 justify-content-center">
-        <div class="col-md-10 col-lg-8 col-xl-7">
-          <% for (var i = 0; i < blogposts.length; i++) {  %>
-          <!-- Post preview-->
-          <!-- <div class="post-preview"> -->
-            <!-- <a href="/post/<%= blogposts[i]._id %>"> -->
-              <!-- <h2 class="post-title"><%- blogposts[i].title %>
-              </h2> -->
-                <%- blogposts[i].body %>
-          </div>
-
-          <% } %>
-
-        </div>
+    <div class="content-wrapper">
+      <div class="image-grid">
+        <img src="/img/katie_tf.jpg" alt="katie_playing_chess_with_friends">
+        <img src="/img/johnny_chess.jpg" alt="friendly_person_wants_to_play_chess_SLC">
+        <img src="/img/father_nathan.jpg" alt="father_nathan_playing_chess_with_community">
+        <img src="/img/chess_jim.jpg" alt="jim_friendly_beginner_at_chess">
       </div>
+
+      <div class="text-content">
+        <img src='/img/chess_logo_compressed.png' alt='logo' class='centered-image'>
+
+        <h1>The Salt Lake City Chess Club</h1>
+        <p class="centered-text"><a href="https://www.instagram.com/slc_chessclub?igsh=MTdqZXZ1ZTBxczFxYw==" target="_blank"><strong>FOLLOW OUR INSTAGRAM @slc_chessclub :) </strong></a></p>
+
+        <% for (var i = 0; i < blogposts.length; i++) { %>
+          <%- blogposts[i].body %>
+        <% } %>
+
+      </div>
+
+
+      <div class="image-grid">
+        <img src="/img/sarah_loki.jpg" alt="Sarah_challenging_chess_position">
+        <img src="/img/chess_loki_3.jpg" alt="Matt_waiting_for_opponent">
+
+        <img src="/img/chess_loki_4.jpg" alt="everyone_playing_chess">
+        <img src="/img/toly_chess.jpg" alt="chess_set">
+        <img src="/img/sausage_fest_chess.jpg" alt="community_gathering_for_chess">
+      </div>
+    </div>
+
+
 
     <!-- <hr /> -->
     <!-- Footer-->

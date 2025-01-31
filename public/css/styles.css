@@ -184,6 +184,7 @@ svg {
   text-align: center;
   margin-top: 20px; /* Adjust for spacing */
   background-color: rgb(116, 0, 58);
+  padding: 1em;
 }
 .centered-image {
   max-width: 20%; /* Adjust this value to control the maximum size */
@@ -1480,4 +1481,41 @@ header.masthead .post-heading .meta a {
   header.masthead .post-heading .subheading {
     font-size: 1.875rem;
   }
+}
+
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.image-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+}
+
+.image-grid img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.text-content {
+  padding-top: 0;
+  margin-top: 0;
+  flex: 2;
+  max-width: 600px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.text-content img {
+  width: 150px; /* Adjust this value as needed */
 }
