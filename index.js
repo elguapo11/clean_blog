@@ -1,4 +1,5 @@
 require("dotenv").config();
+const compression = require('compression')
 const express = require('express')
 const mongoose = require('mongoose')
 const flash = require('connect-flash');
@@ -43,6 +44,7 @@ app.use('*', (req, res, next) => {
   loggedIn = req.session.userId
   next()
 })
+app.use(compression())
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`)
