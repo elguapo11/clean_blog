@@ -147,7 +147,8 @@ h6, .h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
+  font-size: 1em;
 }
 
 
@@ -1489,7 +1490,7 @@ header.masthead .post-heading .meta a {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  max-width: 1200px;
+  max-width: fit-content;
   margin: auto;
 }
 
@@ -1513,7 +1514,7 @@ header.masthead .post-heading .meta a {
   flex: 2;
   max-width: 600px;
   text-align: center;
-  font-size: 1em;
+  font-size: 17px;
 }
 
 .text-content img {
