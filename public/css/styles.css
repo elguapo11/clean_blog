@@ -1526,14 +1526,13 @@ header.masthead .post-heading .meta a {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  flex: 1;
+  width: auto;
 }
 
 .image-grid img {
   width: 100%;
   max-width: 150px;
   height: auto;
-  border-radius: 10px;
 }
 
 .text-content {
@@ -1542,7 +1541,6 @@ header.masthead .post-heading .meta a {
   text-align: left;
   font-size: 13px;
   justify-content: left;
-  padding: 23px;
 }
 
 
