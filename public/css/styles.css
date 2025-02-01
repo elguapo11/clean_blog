@@ -172,7 +172,10 @@ svg {
 }
 
 
+.centered-image-logo {
+  flex-direction: column;
 
+}
 .centered-images-container {
   display: flex;
   justify-content: center; /* Centers the images horizontally */
@@ -182,10 +185,23 @@ svg {
 }
 
 .centered-text {
-  margin-top: 20px; /* Adjust for spacing */
   background-color: rgb(116, 0, 58);
-  padding: 1em;
-  justify-content: space-around;
+  font-size: 2em;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.centered-text picture{
+  box-sizing: border-box;
+
+}
+.centered-text img{
+  background-color: rgb(116, 0, 58);
+  margin: 0;
+  justify-content: center;
+  align-items: center;
 }
 .centered-image {
   max-width: 20%; /* Adjust this value to control the maximum size */
@@ -197,10 +213,6 @@ svg {
   font-size: 55px;    /* Adjust font size */
   margin-top: 50px;   /* Adds vertical spacing */
   color: #005061
-}
-.centered-image.special-size {
-  max-width: 50%; /* Specific size for images with the 'special-size' class */
-  height: auto; /* Ensures the image isn't warped */
 }
 
 
@@ -1487,7 +1499,13 @@ header.masthead .post-heading .meta a {
 
 .content-wrapper {
   display: flex;
-  padding-top: 0;
+  justify-content: center;
+  gap: 15px;
+  max-width: fit-content;
+  margin: auto;
+}
+.content-wrapper img {
+  display: flex;
   justify-content: center;
   gap: 15px;
   max-width: fit-content;
@@ -1501,6 +1519,7 @@ header.masthead .post-heading .meta a {
   gap: 20px;
   max-width: fit-content;
   margin: auto;
+  padding: 1em
 }
 
 .image-grid {
@@ -1518,15 +1537,18 @@ header.masthead .post-heading .meta a {
 }
 
 .text-content {
-  padding-top: 0;
-  margin-top: 0px;
   flex: 2;
-  max-width: 500px;
+  max-width: 600px;
   text-align: left;
   font-size: 13px;
   justify-content: left;
+  padding: 23px;
 }
+
 
 .text-content img {
   width: 75px; /* Adjust this value as needed */
+  height: auto;
+
 }
+
