@@ -2,7 +2,18 @@
     <!-- Navigation -->
     <!-- Main Content-->
 
+    <h1 class='content-wrapper-title'>The Salt Lake City Chess Club</h1>
     <div class="content-wrapper">
+      <div class="text-content">
+
+        <p class="centered-text"><a href="https://www.instagram.com/slc_chessclub?igsh=MTdqZXZ1ZTBxczFxYw==" target="_blank"><strong>FOLLOW OUR INSTAGRAM @slc_chessclub :) </strong></a></p>
+        <img src='/img/chess_logo_compressed.png' alt='logo' class='centered-image-logo'>
+
+        <% for (var i = 0; i < blogposts.length; i++) { %>
+          <%- blogposts[i].body %>
+        <% } %>
+
+      </div>
       <div class="image-grid">
       <picture>
         <img loading="lazy" src="/img/katie_tf_compressed_redo.jpg" height=300 width=300 alt="katie_playing_chess_with_friends">
@@ -22,17 +33,7 @@
       </picture>
       </div>
 
-      <div class="text-content">
 
-        <h1>The Salt Lake City Chess Club</h1>
-        <img src='/img/chess_logo_compressed.png' alt='logo' class='centered-image'>
-        <p class="centered-text"><a href="https://www.instagram.com/slc_chessclub?igsh=MTdqZXZ1ZTBxczFxYw==" target="_blank"><strong>FOLLOW OUR INSTAGRAM @slc_chessclub :) </strong></a></p>
-
-        <% for (var i = 0; i < blogposts.length; i++) { %>
-          <%- blogposts[i].body %>
-        <% } %>
-
-      </div>
 
 
       <div class="image-grid">
