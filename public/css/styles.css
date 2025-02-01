@@ -263,6 +263,7 @@ p a {
 .image-grid img {
   max-width: 100px;
   height: auto;
+  overflow: auto;
 }
 
 .text-content {
@@ -272,12 +273,14 @@ p a {
   font-size: 13px;
   justify-content: left;
   padding: 10px;
+  overflow: auto;
 }
 
 
 .text-content img {
   width: 75px; /* Adjust this value as needed */
   height: auto;
+  overflow: auto;
 
 }
 
