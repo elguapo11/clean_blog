@@ -265,11 +265,16 @@ p a {
   overflow: auto;
 }
 
+.text-content .centered-text {
+  text-align: ;
 
+}
 .text-content img {
   width: 75px; /* Adjust this value as needed */
   height: auto;
   overflow: auto;
+  padding: 25px 50px
 
 }
+
 
