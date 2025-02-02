@@ -164,10 +164,7 @@ svg {
 }
 
 
-.centered-image-logo {
-  flex-direction: column;
 
-}
 .centered-images-container {
   display: flex;
   justify-content: center; /* Centers the images horizontally */
@@ -178,21 +175,17 @@ svg {
 
 .centered-text {
   background-color: rgb(116, 0, 58);
-  font-size: 2em;
+  font-size: 1.2em;
   margin: 0;
   justify-content: center;
   align-items: center;
-  max-width: fit-content;
+  padding: 5px;
 
 }
 
-.centered-text picture{
-  box-sizing: border-box;
 
-}
 .centered-text img{
   background-color: rgb(116, 0, 58);
-  margin: 0;
   justify-content: center;
   align-items: center;
 }
@@ -201,12 +194,7 @@ svg {
   height: auto; /* Ensures the image isn't warped */
 }
 
-#instagram-link {
-  text-align: center; /* Centers the text */
-  font-size: 55px;    /* Adjust font size */
-  margin-top: 50px;   /* Adds vertical spacing */
-  color: #005061
-}
+
 
 
 
@@ -254,16 +242,17 @@ p a {
 }
 
 .image-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: auto;
+  display: grid;
+  height: min-content;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+
+
 }
 
 .image-grid img {
   max-width: 100px;
-  height: auto;
-  overflow: auto;
+  height: fit-content;
 }
 
 .text-content {
@@ -272,7 +261,7 @@ p a {
   text-align: left;
   font-size: 13px;
   justify-content: left;
-  padding: 10px;
+  padding-left: 10px  ;
   overflow: auto;
 }
 
