@@ -259,14 +259,13 @@ p a {
   max-width: 600px;
   text-align: left;
   font-size: 13px;
-  justify-content: left;
   padding-left: 10px  ;
   overflow: auto;
 }
 
 #logo {
-  height: 1em;
-  width: auto
+  width: 182px;
+  height: fit-content;
 
 }
 .text-content img {
