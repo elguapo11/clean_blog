@@ -186,9 +186,8 @@ svg {
 
 .centered-text img{
   background-color: rgb(116, 0, 58);
-  justify-content: center;
-  align-items: center;
 }
+
 .centered-image {
   max-width: 20%; /* Adjust this value to control the maximum size */
   height: auto; /* Ensures the image isn't warped */
@@ -265,10 +264,14 @@ p a {
   overflow: auto;
 }
 
+#logo {
+  height: 1em;
+  width: auto
+
+}
 .text-content img {
-  width: 70px; /* Adjust this value as needed */
+  width: 60px; /* Adjust this value as needed */
   height: 70px;
-  padding: 25px 25px 25px 25px;
 
 }
 
