@@ -84,6 +84,7 @@
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
+
   }
 }
 
@@ -245,9 +246,8 @@ p a {
   height: 500px;
   grid-template-columns: repeat(2, 1fr);
   overflow: scroll;
+  scrollbar-color: var(--bs-white) var(--bs-pink);
   gap: 5px;
-
-
 }
 
 .image-grid img {
