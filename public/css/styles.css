@@ -246,9 +246,19 @@ p a {
   height: 500px;
   grid-template-columns: repeat(2, 1fr);
   overflow: scroll;
-  scrollbar-color: var(--bs-white) var(--bs-pink);
   gap: 5px;
 }
+.image-grid::-webkit-scrollbar {
+  width: 7px;
+}
+.image-grid::-webkit-scrollbar-track {
+  background: #373636;
+}
+.image-grid::-webkit-scrollbar-thumb {
+  background: #3d0202;
+}
+
+
 
 .image-grid img {
   max-width: 100px;
