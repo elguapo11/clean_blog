@@ -242,8 +242,9 @@ p a {
 
 .image-grid {
   display: grid;
-  height: min-content;
+  height: 500px;
   grid-template-columns: repeat(2, 1fr);
+  overflow: scroll;
   gap: 5px;
 
 
