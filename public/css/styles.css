@@ -232,13 +232,14 @@ p a {
 }
 .content-wrapper-title {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 20px;
-  max-width: fit-content;
+  max-width: 100%;
   margin: auto;
-  padding: 1em
+  padding-top: 1em;
+  padding-bottom: 1em;
+
 }
 
 .image-grid {
