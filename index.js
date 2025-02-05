@@ -56,7 +56,15 @@ const homeController = require('./controllers/home')
 
 app.get('/', homeController)
 
+app.use((req, res, next) => {
+  if (req.headers['x-forwarded-proto'] !== 'https') {
+    return res.render('notFound')
+  }
+  next();
+}
+);
 
-app.use((req, res) => {
-  res.render('notfound')
-})
+app.use(function(err, req, res, next) {
+  res.status(500);
+  res.send("Oops, something went wrong.")
+});
