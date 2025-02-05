@@ -252,7 +252,7 @@ p a {
   width: 7px;
 }
 .image-grid::-webkit-scrollbar-track {
-  background: #373636;
+  background: rgb(116, 0, 58);
 }
 .image-grid::-webkit-scrollbar-thumb {
   background: #3d0202;
