@@ -57,10 +57,7 @@ const homeController = require('./controllers/home')
 app.get('/', homeController)
 
 app.use((req, res, next) => {
-  if (req.headers['x-forwarded-proto'] !== 'https') {
-    return res.render('notFound')
-  }
-  next();
+  res.status(404).render('notFound'); // Catch-all for nonexistent routes
 }
 );
 
