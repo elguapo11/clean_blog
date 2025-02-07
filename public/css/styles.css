@@ -179,9 +179,9 @@ svg {
 }
 
 .centered-text-insta {
-  margin: auto;
+  max-width: 100%;
+  height: auto;
   text-align: center;
-  justify-items: center;
   padding-top: 10px;
 }
 
