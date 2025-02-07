@@ -204,6 +204,7 @@ svg {
     display: flex;
     flex-direction: row;
     height: fit-content;
+    padding-top: 25px;
 
   }
 
