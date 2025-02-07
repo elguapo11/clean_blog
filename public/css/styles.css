@@ -168,6 +168,7 @@ svg {
 
 .centered-images-container {
   display: flex;
+  justify-items: center;
   justify-content: center; /* Centers the images horizontally */
   align-items: center; /* Aligns the images vertically, if needed */
   gap: 1em; /* Adjusts spacing between images */
@@ -176,7 +177,7 @@ svg {
 
 .centered-text {
   font-size: 1.2em;
-
+  justify-content: space-between;
 }
 
 
@@ -282,7 +283,8 @@ p a {
 .text-content {
   flex: 2;
   max-width: 600px;
-  text-align: left;
+  text-align: center;
+  justify-items: center;
   font-size: 13px;
   padding-left: 10px  ;
   overflow: auto;
