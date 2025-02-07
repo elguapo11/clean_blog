@@ -5,10 +5,11 @@
     <h1 class='content-wrapper-title'>The Salt Lake City Chess Club</h1>
     <div class="content-wrapper">
       <div class="text-content">
-        <p class="centered-text" style='text-align: center;'><a href="https://www.instagram.com/slc_chessclub?igsh=MTdqZXZ1ZTBxczFxYw==" target="_blank"><strong>FOLLOW OUR INSTAGRAM @slc_chessclub </strong></a></p>
-      <picture>
+        <p class="centered-text">
+           <%- include('layouts/insta');-%>
+
         <img id="logo" loading="lazy" src='/img/chess_logo_compressed.jpg' style='height: 150px; width: 150px;' srcset="/img/chess_logo_compressed.jpg 1x" height=170 width=170 alt='logo'>
-      </picture>
+
 
         <% for (var i = 0; i < blogposts.length; i++) { %>
           <%- blogposts[i].body %>
@@ -72,7 +73,7 @@
       </picture>
     </div>
     </div>
-    </div>
+
 
 
 

@@ -177,17 +177,24 @@ svg {
 .centered-text {
   background-color: rgb(116, 0, 58);
   font-size: 1.2em;
-  margin: 0;
-  justify-content: center;
+
+}
+
+
+#insta {
+  font-size: 1.2em;
   align-items: center;
-  padding: 5px;
+  align-self: center;
+  background-color: rgb(0, 0, 0);
+  margin: auto;
+  width: max-content;
+  height: fit-content;
+
 
 }
 
 
-.centered-text img{
-  background-color: rgb(116, 0, 58);
-}
+
 
 .centered-image {
   max-width: 20%; /* Adjust this value to control the maximum size */
@@ -195,7 +202,24 @@ svg {
 }
 
 
+@media screen and (max-width: 600px) {
+  div.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0px
+  }
 
+}
+
+@media screen and (max-width: 600px) {
+  div.image-grid {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+
+  }
+
+}
 
 
 
