@@ -4,8 +4,8 @@
     <h1 class='content-wrapper-title'>The Salt Lake City Chess Club</h1>
     <div class="content-wrapper">
       <div class="text-content">
-        <p class="centered-text">
-           <%- include('layouts/insta');-%>
+
+
 
         <!-- <img id="logo" loading="lazy" src='/img/chess_logo_compressed.jpg' style='height: 150px; width: 150px;' srcset="/img/chess_logo_compressed.jpg 1x" height=170 width=170 alt='logo'> -->
 
@@ -14,7 +14,13 @@
           <%- blogposts[i].body %>
         <% } %>
 
+        <div class="centered-text-insta">
+          <%- include('layouts/insta');-%>
+        </div>
       </div>
+
+
+
     <div class="image-grid">
       <picture>
         <img loading="lazy" src="/img/katie_tf_compressed_redo.jpg" height=150 width=100 alt="katie_playing_chess_with_friends">

@@ -139,8 +139,6 @@ h6, .h6 {
 }
 
 p {
-  margin-top: 0;
-  margin-bottom: 0;
   font-size: 1em;
 }
 
@@ -180,6 +178,12 @@ svg {
   justify-content: space-between;
 }
 
+.centered-text-insta {
+  margin: auto;
+  text-align: center;
+  justify-items: center;
+  padding-top: 10px;
+}
 
 
 
@@ -222,9 +226,7 @@ hr {
   opacity: 1;
 }
 
-p {
-  margin: 2rem 0;
-}
+
 p a {
   text-decoration: underline;
 }
@@ -281,17 +283,20 @@ p a {
 }
 
 .text-content {
-  flex: 2;
-  max-width: 600px;
+  max-width: 500px;
+  max-height:max-content;
   text-align: center;
-  justify-items: center;
   font-size: 13px;
-  overflow: auto;
+  margin: auto;
+
+
 }
+
 
 #logo {
   width: 182px;
   height: fit-content;
+  padding: 0px;
 
 }
 .text-content img {
