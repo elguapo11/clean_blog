@@ -7,19 +7,22 @@
 
 
 
+
         <!-- <img id="logo" loading="lazy" src='/img/chess_logo_compressed.jpg' style='height: 150px; width: 150px;' srcset="/img/chess_logo_compressed.jpg 1x" height=170 width=170 alt='logo'> -->
 
 
         <% for (var i = 0; i < blogposts.length; i++) { %>
           <%- blogposts[i].body %>
         <% } %>
-
+        <div class="text-content">
+          <%- include('layouts/lichess');-%>
+        </div>
         <div class="centered-text-insta">
           <%- include('layouts/insta');-%>
         </div>
-        <div class="centered-text-insta">
+        <!-- <div class="centered-text-insta">
           <%- include('layouts/lichess');-%>
-        </div>
+        </div> -->
       </div>
 
 
