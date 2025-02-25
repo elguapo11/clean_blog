@@ -207,10 +207,16 @@ svg {
 @media screen and (max-width: 600px) {
   div.image-grid {
     display: flex;
-    flex-direction: row;
-    height: fit-content;
+    flex-direction: column;
+    height: 300px;
     padding-top: 25px;
+    margin: 0
 
+  }
+
+  div.image-grid img {
+    max-width: 300px;
+    height: fit-content;
   }
 
 }
@@ -241,10 +247,11 @@ p a {
 }
 .content-wrapper img {
   display: flex;
-  justify-content: center;
   gap: 15px;
   max-width: fit-content;
   margin: auto;
+  height: auto;
+  width: fit-content;
 }
 .content-wrapper-title {
   display: flex;
