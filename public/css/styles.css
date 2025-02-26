@@ -208,7 +208,7 @@ svg {
   div.image-grid {
     display: flex;
     flex-direction: column;
-    height: 300px;
+    height: 450px;
     padding-top: 25px;
     margin: 0
 
