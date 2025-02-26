@@ -195,14 +195,6 @@ svg {
 }
 
 
-@media screen and (max-width: 600px) {
-  div.content-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 0px
-  }
-
-}
 
 @media screen and (max-width: 600px) {
   div.image-grid {
@@ -213,14 +205,17 @@ svg {
     margin: 0
 
   }
-
   div.image-grid img {
     max-width: 300px;
     height: fit-content;
   }
+  div.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0px
+  }
 
 }
-
 
 
 body {
