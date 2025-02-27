@@ -214,7 +214,7 @@ svg {
   }
 
   div.text-content {
-    max-width: 500px;
+    max-width: 400px;
     max-height:max-content;
     text-align: center;
     font-size: 13px;
