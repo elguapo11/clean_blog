@@ -286,13 +286,13 @@ p a {
   gap: 5px;
 }
 .image-grid::-webkit-scrollbar {
-  width: 7px;
+  width: 5px;
 }
 .image-grid::-webkit-scrollbar-track {
-  background: rgb(139, 139, 139);
+  background: rgb(0, 0, 0);
 }
 .image-grid::-webkit-scrollbar-thumb {
-  background: #3d0202;
+  background: #6b6b6b;
 }
 
 
