@@ -173,21 +173,26 @@ svg {
   flex-wrap: wrap; /* Ensures images wrap to the next line if they exceed the container's width */
 }
 
-.centered-text {
-  font-size: 1.2em;
-  justify-content: space-between;
-}
-
 .centered-text-insta {
   max-width: 100%;
   height: auto;
   text-align: center;
-  padding-top: 1em;
+  padding: 2em;
+
 }
 
+.text-content-text
+{
+max-width: 400px;
+padding: 10px;
+padding-top: 0px;
+}
 
-
-
+.text-content-lichess
+{
+justify-content: center;
+margin: auto;
+}
 
 .centered-image {
   max-width: 20%; /* Adjust this value to control the maximum size */
@@ -218,6 +223,7 @@ svg {
     max-height:max-content;
     text-align: center;
     font-size: 13px;
+    padding: 1em;
 
 
   }
@@ -314,4 +320,6 @@ p a {
   max-height:max-content;
   text-align: center;
   font-size: 13px;
+  padding: 1em;
+
 }
