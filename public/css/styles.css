@@ -182,7 +182,7 @@ svg {
   max-width: 100%;
   height: auto;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 1em;
 }
 
 
@@ -198,21 +198,33 @@ svg {
 
 @media screen and (max-width: 600px) {
   div.image-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    flex-direction: row;
     height: 450px;
-    padding-top: 25px;
-    margin: 0
 
   }
   div.image-grid img {
-    max-width: 300px;
+    max-width: 280px;
     height: fit-content;
   }
   div.content-wrapper {
-    display: flex;
+    display: grid;
     flex-direction: column;
     gap: 0px
+  }
+
+  div.text-content {
+    max-width: 500px;
+    max-height:max-content;
+    text-align: center;
+    font-size: 13px;
+
+
+  }
+  div.text-content img {
+    width: 220px; /* Adjust this value as needed */
+    height: auto;
+
   }
 
 }
@@ -236,15 +248,15 @@ p a {
 .content-wrapper {
   display: flex;
   justify-content: center;
-  gap: 15px;
   max-width: fit-content;
   margin: auto;
+  gap: 10px
 }
 .content-wrapper img {
   display: flex;
+  max-width: 400px;
   gap: 15px;
   max-width: fit-content;
-  margin: auto;
   height: auto;
   width: fit-content;
 }
@@ -262,7 +274,7 @@ p a {
 
 .image-grid {
   display: grid;
-  height: 500px;
+  height: 400px;
   grid-template-columns: repeat(2, 1fr);
   overflow: scroll;
   gap: 5px;
@@ -271,7 +283,7 @@ p a {
   width: 7px;
 }
 .image-grid::-webkit-scrollbar-track {
-  background: rgb(116, 0, 58);
+  background: rgb(139, 139, 139);
 }
 .image-grid::-webkit-scrollbar-thumb {
   background: #3d0202;
@@ -280,19 +292,9 @@ p a {
 
 
 .image-grid img {
-  max-width: 100px;
-  height: fit-content;
+  max-width: 900px;
 }
 
-.text-content {
-  max-width: 500px;
-  max-height:max-content;
-  text-align: center;
-  font-size: 13px;
-  margin: auto;
-
-
-}
 
 
 #logo {
@@ -302,9 +304,14 @@ p a {
 
 }
 .text-content img {
-  width: 60px; /* Adjust this value as needed */
-  height: 70px;
+  width: 280px; /* Adjust this value as needed */
+  height: auto;
 
 }
 
-
+.text-content {
+  max-width: 600px;
+  max-height:max-content;
+  text-align: center;
+  font-size: 13px;
+}
