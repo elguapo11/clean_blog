@@ -203,8 +203,6 @@ color: black
   height: auto; /* Ensures the image isn't warped */
 }
 
-
-
 @media screen and (max-width: 600px) {
   div.image-grid {
     display: grid;
@@ -270,10 +268,10 @@ p a {
   height: auto;
   width: fit-content;
 }
-.content-wrapper-title {
+.content-wrapper-title{
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  justify-items: center;
   gap: 20px;
   max-width: 100%;
   margin: auto;
