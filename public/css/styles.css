@@ -272,7 +272,7 @@ p a {
   display: flex;
   justify-content: space-around;
   justify-items: center;
-  gap: 20px;
+  text-align: center;
   max-width: 100%;
   margin: auto;
   padding-top: 1em;
