@@ -32,6 +32,8 @@ window.addEventListener('DOMContentLoaded', () => {
 document.addEventListener("DOMContentLoaded", function () {
     let images = document.querySelectorAll("div img");
     let modalImage = document.getElementById("modalImage");
+    let modalTitle = document.getElementById("imageModalLabel"); // Get the modal title element
+
     let currentIndex = 0;
 
     function openModal(index) {
@@ -41,7 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updateModalImage() {
-      modalImage.src = images[currentIndex].src;
+        let currentImage = images[currentIndex];
+        modalImage.src = currentImage.src;
+        modalImage.alt = currentImage.alt;
+        modalTitle.textContent = currentImage.alt;
     }
 
     function prevImage() {
