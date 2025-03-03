@@ -122,6 +122,13 @@ button:focus:not(:focus-visible) {
   align-items: center;
 
 }
+#modalImage{
+  width: 50%;
+  height: auto;
+  justify-content: center;
+  align-self: center;
+
+}
 .modal-dialog{
   justify-self: center;
   align-items: center;
@@ -149,7 +156,6 @@ button:focus:not(:focus-visible) {
   --bs-modal-color: ;
   --bs-modal-bg: var(--bs-body-bg);
   --bs-modal-border-color: var(--bs-border-color-translucent);
-  --bs-modal-border-width: var(--bs-border-width);
   --bs-modal-border-radius: var(--bs-border-radius-lg);
   --bs-modal-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   --bs-modal-inner-border-radius: calc(
@@ -160,12 +166,11 @@ button:focus:not(:focus-visible) {
   --bs-modal-header-padding-y: 1rem;
   --bs-modal-header-padding: 1rem 1rem;
   --bs-modal-header-border-color: var(--bs-border-color);
-  --bs-modal-header-border-width: var(--bs-border-width);
+
   --bs-modal-title-line-height: 75px;
   --bs-modal-footer-gap: 0.5rem;
   --bs-modal-footer-bg: ;
   --bs-modal-footer-border-color: var(--bs-border-color);
-  --bs-modal-footer-border-width: var(--bs-border-width);
   position: fixed;
   top: 0;
   left: 0;
@@ -302,7 +307,6 @@ svg {
 
 .modal-content {
   position: relative;
-
   flex-direction: column;
   align-items: center;
   justify-content: center;
