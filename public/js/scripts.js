@@ -71,9 +71,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.addEventListener("keydown", function (event) {
-      if (event.key.toLowerCase() === "a") { // Check if "A" key is pressed
+      if (event.key === "ArrowLeft") {
           prevImage(); // Navigate to the previous image
-      } else if (event.key.toLowerCase() === "d") { // Check if "D" key is pressed
+      }
+      if (event.key === "ArrowRight") {
           nextImage(); // Navigate to the next image
       }
   });
