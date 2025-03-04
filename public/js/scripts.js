@@ -30,6 +30,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener("DOMContentLoaded", function () {
+
+
+
+
     let images = document.querySelectorAll("div img");
     let modalImage = document.getElementById("modalImage");
     let modalTitle = document.getElementById("imageModalLabel"); // Get the modal title element
@@ -65,6 +69,14 @@ document.addEventListener("DOMContentLoaded", function () {
         openModal(index);
       });
     });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key.toLowerCase() === "a") { // Check if "A" key is pressed
+          prevImage(); // Navigate to the previous image
+      } else if (event.key.toLowerCase() === "d") { // Check if "D" key is pressed
+          nextImage(); // Navigate to the next image
+      }
+  });
 
     // Expose functions to the global scope so they can be used in the modal
     window.prevImage = prevImage;
