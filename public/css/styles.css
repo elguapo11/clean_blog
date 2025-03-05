@@ -340,7 +340,7 @@ svg {
 
 }
 
-@keyframes example {
+@keyframes popup {
   from {background-color: rgb(59, 44, 85);}
   to {background-color: rgb(117, 0, 0);}
 
@@ -349,7 +349,7 @@ svg {
 .pop-up-message {
 
   font-size: 25px;
-  animation-name: example;
+  animation-name: popup;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   background-color: gray;
