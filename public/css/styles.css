@@ -340,8 +340,18 @@ svg {
 
 }
 
+@keyframes example {
+  from {background-color: rgb(59, 44, 85);}
+  to {background-color: rgb(117, 0, 0);}
+
+}
+
 .pop-up-message {
+
   font-size: 25px;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
   background-color: gray;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
