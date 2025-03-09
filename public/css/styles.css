@@ -346,15 +346,6 @@ svg {
 
 }
 
-.pop-up-message {
-
-  font-size: 25px;
-  animation-name: popup;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  background-color: gray;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
 .text-content-text
 {
 max-width: 400px;
