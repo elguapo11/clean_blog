@@ -339,13 +339,6 @@ svg {
   padding: 2em;
 
 }
-
-@keyframes popup {
-  from {background-color: rgb(59, 44, 85);}
-  to {background-color: rgb(117, 0, 0);}
-
-}
-
 .text-content-text
 {
 max-width: 400px;
