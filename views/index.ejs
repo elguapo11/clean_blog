@@ -1,0 +1,191 @@
+<%- include ('layouts/header'); -%>
+    <!-- Main Content-->
+
+    <h1 class='content-wrapper-title'>The Salt Lake City Chess Club</h1>
+    <div class="content-wrapper">
+      <div class="text-content">
+        <div class='text-content-text'>
+        <% for (var i = 0; i < blogposts.length; i++) { %>
+          <%- blogposts[i].body %>
+        <% } %>
+
+      </div>
+        <div class="text-content-lichess">
+          <%- include('layouts/lichess');-%>
+        </div>
+      </div>
+      <div class="text-content">
+      <div class="image-grid">
+          <picture>
+            <img loading="lazy" src="/img/katie_tf_compressed_redo.jpg" height=200 width=150 alt="katie_playing_chess_with_friends">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/johnny_compressed.jpg" class="gallery-img" height=150 width=100 alt="friendly_person_wants_to_play_chess_SLC">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/sarah_loki_compressed.jpg" srcset="/img/sarah_loki_compressed.jpg" height=150 width=100 alt="Sarah_challenging_chess_position">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/father_nathan_compressed.jpg" height=150 width=100 alt="father_nathan_playing_chess_with_community">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/chess_beer.jpg" srcset='/img/chess_beer.jpg' height=66 width=150 alt="this_looks_artsy_as_fuck">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/christian_looking_boss.jpg" srcset="/img/christian_looking_boss.jpg" height=150 width=100 alt="He_is_still_so_sad">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/chess_table_beanie.jpg" srcset='/img/chess_table_beanie.jpg' height=150 width=100 alt="chess_community">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/chess_watch.jpg" srcset="/img/chess_watch.jpg" height=150 width=100 alt="This_player_is_suave_and_smooth_as_fuck">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/sad_chess.jpg" srcset="/img/sad_chess.jpg" height=150 width=100 alt="He_is_so_sad">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/Sam_somber.jpg" srcset="/img/Sam_somber.jpg" height=150 width=100 alt="Sam_has_never_been_happy_someone_check_on_him_pls">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/chess_tf_table_two.jpg" srcset="/img/chess_tf_table_two.jpg" height=150 width=100 alt="sick_turnout">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/chess_vertical_jack.jpg" srcset="/img/chess_vertical_jack.jpg" height=150 width=100 alt="Jack_is_scary">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/chess_loki_4_compressed_2.jpg" srcset="img/chess_loki_4_compressed_2.jpg" height=150 width=100 alt="everyone_playing_chess">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/bronson_anna_friends.jpg" srcset="/img/bronson_anna_friends.jpg" height=150 width=100 alt="Bronson_rizzing_up_everyone">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/bronson_nail.jpg" srcset="/img/bronson_nail.jpg" height=150 width=100 alt="Bronson_usually_prefers_food_over_nails">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/payton_looking_fly.jpg" srcset="/img/payton_looking_fly.jpg" height=150 width=100 alt="Payton_looks_fly_as_fuck">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/guy_anna.jpg" srcset="/img/guy_anna.jpg" height=150 width=100 alt="guy_got_rizz">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/guy_anna_2.jpg" srcset="/img/guy_anna_2.jpg" height=150 width=100 alt="guy_still_got_rizz">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/chloe_smiling.jpg" srcset="/img/chloe_smiling.jpg" height=150 width=100 alt="Chloe_yelled_at_me_once">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/guy_looks_fresh.jpg" srcset="/img/guy_looks_fresh.jpg" height=150 width=100 alt="a_master_making_sweet_love_to_the_chessboard">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/sam_final_boss.jpg" srcset="/img/sam_final_boss.jpg" height=150 width=100 alt="Sam_looks_like_he_can_deliver_a_nasty_mate">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/blurryStephen.jpg" srcset="/img/blurryStephen.jpg" height=150 width=100 alt="a_blurry_photo_of_stephen">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/theFinalBoss.jpg" srcset="/img/theFinalBoss.jpg" height=150 width=100 alt="Sam_looks_menacing">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/ZachConcerned.jpg" srcset="/img/ZachConcerned.jpg" height=150 width=100 alt="Zach_often_in_trouble_when_playing_blitz">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/intenseGame.jpg" srcset="/img/intenseGame.jpg" height=150 width=100 alt="Grandmasters_silently_judging_noobs">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/guy_waiting.jpg" srcset="/img/guy_waiting.jpg" height=150 width=100 alt="guy_is_too_good_that_he_often_waits_for_a_worthy_opponent">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/anna_confused.jpg" srcset="/img/anna_confused.jpg" height=150 width=100 alt="anna_super_confused_with_the_economy">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/johnny_swag.jpg" srcset="/img/johnny_swag.jpg" height=150 width=100 alt="it_is_pronounced_johnny_but_that_is_not_how_you_spell_it">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/nathan_hand.jpg" srcset="/img/nathan_hand.jpg" height=150 width=100 alt="nathan_struggling_to_play_bullet">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/tic_rizz.jpg" srcset="/img/tic_rizz.jpg" height=150 width=100 alt="Atticus_usually_gets_naked_to_play_chess">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/jack_judging_again.jpg" srcset="/img/jack_judging_again.jpg" height=150 width=100 alt="next_to_playing_chess_jack_loves_judging">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/omar_chess.jpg" srcset="/img/omar_chess.jpg" height=150 width=100 alt="Omar_so_quick_he_looks_blurry">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/sausage_fest.jpg" srcset="/img/sausage_fest.jpg" height=150 width=100 alt="sausage_fest">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/chess_loki_3_compressed_redo.jpg" srcset="/img/chess_loki_3_compressed_redo.jpg" height=150 width=100 alt="Matt_waiting_for_opponent">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/GaNaa_beast.jpg" srcset="/img/GaNaa_beast.jpg" height=150 width=100 alt="GaNaa_is_an_insanely_strong_player">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/bryan_chess.jpg" srcset="/img/bryan_chess.jpg" height=150 width=100 alt="bryan_ponders_the_position">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/anna_mirin.jpg" srcset="/img/anna_mirin.jpg" height=150 width=100 alt="anna_about_take_his_clothes_off">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/chess_light_leak.jpg" srcset="/img/chess_light_leak.jpg" height=150 width=100 alt="light_leak_makes_it_artsy">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/jack_juicy_lips.jpg" srcset="/img/jack_juicy_lips.jpg" height=150 width=100 alt="Jack_has_tasty_lips">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/zach_smiling.jpg" srcset="/img/zach_smiling.jpg" height=150 width=100 alt="Zach_strips_on_the_side">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/tic_stretching.jpg" srcset="/img/tic_stretching.jpg" height=150 width=100 alt="Tic_dislocated_his_shoulder_playing_this">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/Toly_drunk.jpg" srcset="/img/Toly_drunk.jpg" height=150 width=100 alt="Toly_only_wins_when_he_drinks">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/guy_looking_beyond.jpg" srcset="/img/guy_looking_beyond.jpg" height=150 width=100 alt="guy_looking_beyond_the_board">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/colin_crushed.jpg" srcset="/img/colin_crushed.jpg" height=150 width=100 alt="I_am_pretty_sure_colin_lost">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/deep_jordan.jpg" srcset="/img/deep_jordan.jpg" height=150 width=100 alt="Looks_like_an_epic_showdown">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/katie_guy_playing.jpg" srcset="/img/katie_guy_playing.jpg" height=150 width=100 alt="Look_how_classy_this_looks">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/katie_spelling_unknown.jpg" srcset="/img/katie_spelling_unknown.jpg" height=150 width=100 alt="Katie_was_dragged_here_by_bethen">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/bethen_smiling.jpg" srcset="/img/bethen_smiling.jpg" height=150 width=100 alt="Bethen_really_fucking_loves_chess">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/a_winning_smile.jpg" srcset="/img/a_winning_smile.jpg" height=150 width=100 alt="Deepyaman_kills_everyone_with_a_smile">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/blunder_in_action.jpg" srcset="/img/blunder_in_action.jpg" height=150 width=100 alt="hand_and_brain_gone_wrong">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/Adrian_is_Jason_Statham.jpg" srcset="/img/Adrian_is_Jason_Statham.jpg" height=150 width=100 alt="Jason_Statham_Plays_Chess">
+          </picture>
+          <picture>
+            <img loading="lazy" src="/img/chess_couple.jpg" srcset="/img/chess_couple.jpg" height=150 width=100 alt="How_to_court_someone_in_chess">
+          </picture>
+        </div>
+        <div class="centered-text-insta">
+          <%- include('layouts/insta');-%>
+        </div>
+        </div>
+  </div>
+  <%- include("layouts/modal") %>
+
+
+<!-- Link the external script -->
+
+<script src="/js/scripts.js"></script>
+
+  </body>
+</html>
+
+
