@@ -339,12 +339,22 @@ svg {
   padding: 2em;
 
 }
-.text-content-text
-{
+.text-content-text{
 max-width: 400px;
 padding: 10px;
 padding-top: 0px;
 }
+
+.pop-up{
+  display: grid;
+  max-width: fit-content;
+  margin: auto;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 5px;
+  }
+
+
 iframe {
   border: none;
 }
