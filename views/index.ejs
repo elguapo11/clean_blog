@@ -9,6 +9,13 @@
         <% for (var i = 0; i < blogposts.length; i++) { %>
           <%- blogposts[i].body %>
         <% } %>
+        <div class="text-content-party">
+        <picture>
+          <img loading="lazy" src="/img/blockparty.png" height=200 width=150 alt="community_party">
+        </picture>
+        Come join the community May 10th. Enjoy the hangs and play some chess with us!
+      </div>
+
       </div>
         <div class="text-content-lichess">
           <%- include('layouts/lichess');-%>

@@ -344,6 +344,15 @@ max-width: 400px;
 padding: 10px;
 padding-top: 0px;
 }
+.text-content-party{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 25px;
+  background-color: rgb(99, 99, 99);
+
+  }
 
 .pop-up{
   display: grid;
