@@ -18,30 +18,13 @@ mongoose.connect(CONNECTION_STRING)
 const app = new express()
 const ejs = require('ejs')
 
-const fileUpload = require('express-fileupload')
-const validateMiddleWare = require('./middleware/validationMiddleware')
-const expressSession = require('express-session')
-const authMiddleware = require('./middleware/authMiddleware')
-const redirectIfAuthenticatedMiddleware = require('./middleware/redirectIfAuthenticatedMiddleware')
-
 app.set('view engine', 'ejs')
-
-global.loggedIn = null
 
 app.use(express.static('public'))
 app.use(express.json())
-app.use(fileUpload())
-app.use('/posts/store', validateMiddleWare)
-app.use(
-  expressSession({
-    secret: process.env.SECRET,
-    resave: false,
-    saveUninitialized: true,
-  })
-)
+
 app.use(flash())
 app.use('*', (req, res, next) => {
-  loggedIn = req.session.userId
   next()
 })
 app.use(compression())
